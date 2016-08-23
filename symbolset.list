@@ -1,0 +1,131 @@
+#SYMBOLSET
+#
+# SYMBOLS
+#
+SYMBOL
+  NAME "cross"
+  TYPE vector
+  POINTS
+    2 0
+    2 4
+    -99 -99
+    0 2
+    4 2
+  END 
+END
+
+SYMBOL
+  NAME 'dashed1'
+  TYPE ELLIPSE
+	POINTS 1 1 END
+  FILLED true
+  STYLE 10 5 5 10 END
+END
+
+SYMBOL
+  NAME "line"
+  TYPE ELLIPSE
+  POINTS 1 1 END
+  FILLED true
+END
+
+SYMBOL
+	NAME 'dcircle'
+	TYPE ELLIPSE
+	FILLED TRUE
+	POINTS 1 2 END
+	STYLE 1 3 END
+END
+
+SYMBOL
+  NAME "circle"
+  TYPE ellipse
+  FILLED true
+  POINTS
+    1 1
+  END
+END
+
+SYMBOL
+  NAME "triangle"
+  TYPE vector
+  POINTS
+    0 4
+    2 0
+    4 4
+    0 4
+  END
+END
+
+
+SYMBOL
+  NAME "first"
+  TYPE TRUETYPE
+  FONT eogw
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#34;"
+END
+
+SYMBOL
+  NAME "oil"
+  TYPE TRUETYPE
+  FONT eogw
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#39;"
+END
+
+SYMBOL
+  NAME "both"
+  TYPE TRUETYPE
+  FONT eogw
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#49;"
+END
+
+SYMBOL
+  NAME "gas"
+  TYPE TRUETYPE
+  FONT eogw
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#42;"
+END
+
+SYMBOL
+  NAME "dry"
+  TYPE TRUETYPE
+  FONT eogw
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#87;"
+END
+
+SYMBOL
+  NAME "swd"
+  TYPE TRUETYPE
+  FONT eogw
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#208;"
+END
+
+SYMBOL
+  NAME "aoil"
+  TYPE TRUETYPE
+  FONT eogw
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#89;"
+END
+
+SYMBOL
+  NAME "agas"
+  TYPE TRUETYPE
+  FONT eogw
+  FILLED true
+  ANTIALIAS true
+  CHARACTER "&#44;"
+END

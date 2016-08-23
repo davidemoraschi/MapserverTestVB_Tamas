@@ -1,0 +1,125 @@
+#http://localhost/cgi-bin/mapserv.exe?map=d:/project/clo/inetpub/wwwroot/clomap/mapCLO_basic.map
+#
+# Start of map file
+#
+MAP
+DATAPATTERN "*"
+
+NAME CLO
+STATUS ON
+SIZE 500 400
+EXTENT -633771.227805 1060738.573036 152927.340425 1689379.870746 
+UNITS METERS
+#EXTENT -102 33 -94 37
+#UNITS DD
+#SHAPEPATH "D:\Project\CLO\inetpub\wwwroot\data"
+SHAPEPATH "..\data"
+FONTSET fonts.list
+#IMAGECOLOR 255 255 255
+IMAGECOLOR 218 227 240
+SYMBOLSET "symbolset.list"
+
+# you may need to change this to match your MapServer build
+#IMAGETYPE jpeg
+OUTPUTFORMAT
+   NAME png
+   DRIVER "GD/PNG"
+   MIMETYPE "image/png"
+   IMAGEMODE RGBA
+   EXTENSION "png"
+END
+
+#
+PROJECTION # ALBERS OK -all drg's and doqq's on geo site are OK ALBERS
+	proj=aea
+	lat_1=29.500000000 #SP1
+	lat_2=45.500000000 #SP2
+	lat_0=23.000000000 #REF LAT
+	lon_0=-96.000000000 #CENTRAL MERIDIAN
+	x_0=0.000 #FALSE EAST
+	y_0=0.000 # FALSE NORTH
+	datum=NAD83
+	ellps=GRS80
+	no_defs
+END
+
+WEB
+	EMPTY "http://localhost/clogis/clomap/mapCLOnorecords.htm"
+	#TEMPLATE "http://localhost/clogis/clomap/mapCLOmap_basic.htm"
+	TEMPLATE "d:\project\clo\inetpub\wwwroot\clomap\mapCLOmap_basic.htm"
+	#TEMPLATE "http://localhost/clogis/clomap/mapBasic.htm"
+	MAXSCALE 4460025.787354 
+	IMAGEPATH "d:\project\clo\inetpub\wwwroot\tmp\"
+	IMAGEURL "/clogis/tmp/"
+END
+
+LEGEND
+	STATUS ON
+	KEYSIZE 18 12
+	TRANSPARENT on
+	#LABEL
+	#	TYPE BITMAP
+	#	SIZE MEDIUM
+	#	COLOR 0 0 89
+	#END
+	TEMPLATE "d:\project\clo\inetpub\wwwroot\clomap\mapCLOhtmllegend_basic.htm"
+END
+
+##############
+### LAYERS ###
+##############
+
+### STATE ###
+LAYER 
+	NAME state
+	TYPE POLYGON
+	STATUS DEFAULT
+	DATA county
+	PROJECTION #GEOGRAPHIC NAD83
+		proj=longlat
+		ellps=GRS80 
+		no_defs 
+	END
+	CLASS#
+    	COLOR 255 255 255
+	END
+END
+
+
+### COUNTY ###
+LAYER 
+	GROUP "Administrative Boundaries"
+	NAME county
+	TYPE LINE
+	STATUS DEFAULT
+	DATA county
+	PROJECTION #GEOGRAPHIC NAD83
+		proj=longlat
+		ellps=GRS80 
+		no_defs 
+	END
+	TRANSPARENCY 70
+	TEMPLATE "IDCounty.htm"
+	CLASS#
+		MAXSCALE 100000
+		SYMBOL "line"
+	    COLOR 98 98 98
+    	SIZE 8
+	END
+	CLASS#
+		MINSCALE 100001
+		SYMBOL "line"
+		NAME "County Boundary"
+    	COLOR 98 98 98
+		SIZE 2
+	END
+	METADATA
+		"DataLayersID" "17"
+		"wms_title" "County"
+		legend_order "1000"
+	END
+END
+
+
+
+END # Map File

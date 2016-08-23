@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MapserverTestVB
+</name>
+</assembly>
+<members>
+<member name="M:MapserverTestVB.Form1.Pixel2Geo(pointObj)">
+	<summary>
+ Resultant point is in GEO coords
+ </summary>
+	<param name="pt">Image Coords</param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,16 @@
+bin\Debug\MapserverTestVB.exe
+bin\Debug\MapserverTestVB.pdb
+bin\Debug\MapserverTestVB.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MapserverTestVB.Resources.resources
+obj\Debug\MapserverTestVB.vbproj.GenerateResource.Cache
+obj\Debug\MapserverTestVB.exe
+obj\Debug\MapserverTestVB.xml
+obj\Debug\MapserverTestVB.pdb
+obj\Debug\MapserverTestVB.exe.manifest
+bin\Debug\MapserverTestVB.exe.manifest
+bin\Debug\msvcm80.dll
+bin\Debug\msvcp80.dll
+bin\Debug\msvcr80.dll
+bin\Debug\Microsoft.VC80.CRT.manifest
+obj\Debug\MapserverTestVB.Form1.resources
